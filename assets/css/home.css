@@ -291,6 +291,10 @@ h2{
     line-height: 150%;
     letter-spacing: 1.5%;
     text-transform: uppercase;
+    transition: 0.3s;
+}
+.arrow-href:hover{
+    opacity: 0.8;
 }
 
 .icon-arrow-prev{
