@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/">
+    <title></title>
+</head>
+<body>
+
+<section class="concat-page">
+    <div class="container">
+        <a href="./index.html" class="arrow-href">
+            <i class="icon-arrow-prev"></i>
+            <span>назад</span>
+        </a>
+        <div class="concat-flex">
+            <div class="concat-info">
+                <h3>свяжитесь с нами</h3>
+                <h5>Шудашова Яна</h5>
+                <p>Алла Разуваева</p>
+                <p>Вильям Хайло</p>
+            </div>
+            <div class="concat-form" style="background-image: url('./assets/img/contact-fon.webp');">
+                <form action="send.php" method="POST">
+
+                    <div class="concat-form-col">
+
+                        <div class="concat-input">
+                            <small>Имя</small>
+                            <label>
+                                <input type="text" name="name" required>
+                            </label>
+                        </div>
+
+                        <div class="concat-input">
+                            <small>Email</small>
+                            <label>
+                                <input type="email" name="email" required>
+                            </label>
+                        </div>
+
+                        <div class="concat-input">
+                            <small>Что вам интересно?</small>
+                            <label>
+                                <input type="text" name="subject">
+                            </label>
+                        </div>
+
+                        <div class="concat-input">
+                            <small>Сообщение</small>
+                            <label>
+                                <textarea name="message" required></textarea>
+                            </label>
+                        </div>
+
+                        <button class="btn-send" type="submit">Submit</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src="./assets/js/jquery-3.6.4.js"></script>
+<script src="./assets/js/script.js"></script>
+
+
+</body>
+</html>
+
+
