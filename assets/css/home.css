@@ -5,20 +5,22 @@
     top: 0;
     height: 100vh;
     z-index: 999999;
-    transition: 1.8s;
+    transition: 0.8s;
     background-image: url("../img/loading-fon.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
 .loading-rem{
-    transform: translateY(-110%);
+    opacity: 0;
+    visibility: hidden;
 }
 .loading-info{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 226px 32px 110px;
+    padding: 40px 32px;
+    height: 100%;
 }
 .loading-info img{
     max-width: 450px;
@@ -43,10 +45,34 @@
 }
 
 
+.loading-info .about-bar{
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
 
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.6s ease-out;
+}
+.animate-on-scroll.visible {
+    opacity: 1;
+}
 
+.animate-on-scroll.delay-100 { transition-delay: 0.1s; }
+.animate-on-scroll.delay-200 { transition-delay: 0.2s; }
+.animate-on-scroll.delay-300 { transition-delay: 0.3s; }
+.animate-on-scroll.delay-400 { transition-delay: 0.4s; }
+.animate-on-scroll.delay-500 { transition-delay: 0.5s; }
+.animate-on-scroll.delay-600 { transition-delay: 0.6s; }
+
+.body{
+    overflow: hidden;
+}
+.body-fix{
+    overflow: unset;
+}
 
 
 header{
@@ -62,6 +88,7 @@ header{
 
 .logo{
     display: flex;
+    width: 125px;
 }
 
 .nav-menu ul{
@@ -181,11 +208,12 @@ header{
     border-radius: 20px;
     display: flex;
     position: relative;
-    transition: 0.3s;
+    transition: 0.6s;
     cursor: pointer;
+    overflow: hidden;
 }
 .banner-box:hover{
-    opacity: 0.60;
+    opacity: 0.80;
 }
 .banner-box:before{
     content: "";
@@ -202,6 +230,10 @@ header{
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+    transition: 0.6s;
+}
+.banner-box:hover img{
+    transform: scale(1.05);
 }
 .banner-info{
     position: absolute;
@@ -308,11 +340,18 @@ h2{
 
 .icon-arrow-prev{
     content: url("../img/arrow-left.svg");
+    transition: 0.3s;
+}
+.arrow-href:hover .icon-arrow-prev{
+    transform: translateX(-6px);
 }
 .icon-arrow-next{
     content: url("../img/arrow-right.svg");
+    transition: 0.3s;
 }
-
+.arrow-href:hover .icon-arrow-next{
+    transform: translateX(6px);
+}
 .project-info{
     margin-top: 115px;
     position: relative;
@@ -501,6 +540,12 @@ h2{
     display: flex;
     flex-direction: column;
     align-items: center;
+    opacity: 0;
+    transform: translateY(10px);
+}
+.about-anime .about-bar{
+    opacity: 1;
+    transform: translateY(0);
 }
 .about-bar strong{
     font-weight: 400;
@@ -523,6 +568,24 @@ h2{
     text-transform: uppercase;
     margin-top: 5px;
 }
+
+.anime-100{
+    transition: 0.5s;
+}
+.anime-200{
+    transition: 0.8s;
+}
+.anime-300{
+    transition: 1.2s;
+}
+.anime-400{
+    transition: 1.5s;
+}
+.anime-500{
+    transition: 1.9s;
+}
+
+
 
 
 .generations-col{
@@ -761,7 +824,7 @@ h2{
     color: rgba(0, 0, 0, 1);
     font-weight: 300;
     font-size: 46.67px;
-    line-height: 100%;
+    line-height: 135%;
     text-transform: uppercase;
 
 }
@@ -769,7 +832,7 @@ h2{
     margin-top: 54px;
     font-weight: 300;
     font-size: 32px;
-    line-height: 100%;
+    line-height: 130%;
     color: rgba(45, 46, 46, 1);
 }
 .concat-info p{
@@ -777,7 +840,7 @@ h2{
     margin-top: 20px;
     font-weight: 300;
     font-size: 16px;
-    line-height: 100%;
+    line-height: 24px;
 }
 .concat-form{
     max-width: 822px;
@@ -788,6 +851,7 @@ h2{
     min-height: 956px;
     border-radius: 20px;
     background-position: center;
+    background-image: url('../img/contact-fon.png');
 }
 
 .concat-form-col{
@@ -798,6 +862,8 @@ h2{
     gap: 28px;
     max-width: 563px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -807,7 +873,7 @@ h2{
 .concat-input small{
     font-weight: 300;
     font-size: 14px;
-    line-height: 100%;
+    line-height: 20px;
     color: rgba(231, 234, 253, 1);
     margin-bottom: 15px;
     display: block;
@@ -829,7 +895,15 @@ h2{
     line-height: 100%;
     color: rgba(231, 234, 253, 1);
     font-family: 'Oswald';
-
+    transition: border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.concat-input input.input-error,
+.concat-input textarea.input-error {
+    border: 2px solid #e53e3e;
+}
+.concat-input input.input-ok,.concat-input textarea.input-ok {
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 .concat-input textarea{
     height: 165px;
@@ -852,7 +926,9 @@ h2{
     font-family: 'Oswald';
 
 }
-
+.btn-send:hover{
+    opacity: 0.8;
+}
 
 
 
@@ -957,12 +1033,8 @@ h2{
         font-size: 16px;
         line-height: 23.35px;
     }
-    .icon-arrow-prev {
-        width: 24px;
-    }
-    .icon-arrow-next {
-        width: 24px;
-    }
+
+
     .about-us-main {
         padding-top: 70px;
     }
@@ -1001,7 +1073,7 @@ h2{
         max-width: 380px;
     }
     .represents-cnt {
-        padding: 63px 30px 39px 32px;
+        padding: 63px 30px 39px 30px;
     }
     .represents-item {
         max-width: 210px;
@@ -1077,9 +1149,6 @@ h2{
     .loading-info img {
         max-width: 401px;
     }
-    .loading-info {
-        padding: 156px 32px 60px;
-    }
 
 
 
@@ -1132,6 +1201,12 @@ h2{
     .arrow-href span{
         display: none;
     }
+    .arrow-href:hover .icon-arrow-prev{
+        transform: translateX(0);
+    }
+    .arrow-href:hover .icon-arrow-next{
+        transform: translateX(0);
+    }
     .represents-flex {
         flex-direction: column;
         align-items: center;
@@ -1157,7 +1232,6 @@ h2{
         display: none;
     }
     .loading-info {
-        padding: 60px 28px 60px;
         height: 100%;
     }
 }
@@ -1195,7 +1269,7 @@ h2{
         justify-content: center;
     }
     .concat-flex {
-        padding-bottom: 80px;
+        padding-bottom: 190px;
     }
     .concert-program p {
         font-size: 24px;
@@ -1238,11 +1312,11 @@ h2{
         min-height: 660px;
     }
     .represents-cnt {
-        padding: 76px 24px 60px 29px;
+        padding: 76px 29px 60px 29px;
     }
     .represents-item {
         min-height: 301px;
-        max-width: 250px;
+        max-width: 450px;
         padding: 50px 17px 16px;
     }
     .about-project {
@@ -1285,6 +1359,21 @@ h2{
         margin-top: 36px;
     }
 
+    .concat-form{
+        position: relative;
+        background-image: url('../img/contact-fon-mob.png');
+    }
+
+    .concat-form:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(45, 45, 45, 0.3);
+        border-radius: 20px;
+    }
 
 
     .header-main {
@@ -1346,5 +1435,13 @@ h2{
         font-size: 20px;
         line-height: 33px;
         margin-top: 87px;
+    }
+    .represents-col{
+        padding: 90px 9px 0;
+    }
+    .concat-info h3 {
+
+        max-width: 278px;
+        width: 100%;
     }
 }

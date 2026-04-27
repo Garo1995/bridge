@@ -25,43 +25,44 @@
                 <p>Алла Разуваева</p>
                 <p>Вильям Хайло</p>
             </div>
-            <div class="concat-form" style="background-image: url('./assets/img/contact-fon.webp');">
-                <form action="send.php" method="POST">
-
+            <div class="concat-form" >
+                <form id="contactForm" action="send.php" method="POST" novalidate>
                     <div class="concat-form-col">
-
                         <div class="concat-input">
                             <small>Имя</small>
                             <label>
-                                <input type="text" name="name" required>
+                                <input type="text" name="name" id="name" required>
                             </label>
+                            <div class="error" id="nameError" ></div>
                         </div>
 
                         <div class="concat-input">
                             <small>Email</small>
                             <label>
-                                <input type="email" name="email" required>
+                                <input type="email" name="email" id="email" required>
                             </label>
+                            <div class="error" id="emailError" ></div>
                         </div>
 
                         <div class="concat-input">
                             <small>Что вам интересно?</small>
                             <label>
-                                <input type="text" name="subject">
+                                <input type="text" name="subject" id="subject">
                             </label>
                         </div>
 
                         <div class="concat-input">
                             <small>Сообщение</small>
                             <label>
-                                <textarea name="message" required></textarea>
+                                <textarea name="message" id="message" required></textarea>
                             </label>
                         </div>
 
-                        <button class="btn-send" type="submit">Submit</button>
-
+                        <button class="btn-send" type="submit">Отправить</button>
+                        <div id="formResult"></div>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
@@ -72,7 +73,77 @@
 
 <script src="./assets/js/jquery-3.6.4.js"></script>
 <script src="./assets/js/script.js"></script>
+<script>
+    const form = document.querySelector('form');
+    const nameInput = document.querySelector('input[name="name"]');
+    const emailInput = document.querySelector('input[name="email"]');
 
+    function setError(input) {
+        input.classList.add('input-error');
+        input.classList.remove('input-ok');
+    }
+
+    function setOk(input) {
+        input.classList.remove('input-error');
+        input.classList.add('input-ok');
+    }
+
+    function validateName(value) {
+        // минимум 2 символа, только буквы/пробелы/дефис
+        return /^[\p{L}\s'-]{2,60}$/u.test(value.trim());
+    }
+
+    function validateEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
+    }
+
+    // Убираем проверку на blur — валидация только при submit
+
+    // При вводе: если стало валидно — убираем ошибку (не ставим ошибку при вводе)
+    nameInput.addEventListener('input', () => {
+        if (validateName(nameInput.value)) {
+            setOk(nameInput);
+        } else {
+            // не подсвечиваем красным при вводе; только удаляем "ok", если поле снова невалидно
+            nameInput.classList.remove('input-ok');
+        }
+    });
+
+    emailInput.addEventListener('input', () => {
+        if (validateEmail(emailInput.value)) {
+            setOk(emailInput);
+        } else {
+            emailInput.classList.remove('input-ok');
+        }
+    });
+
+    // Валидация только при отправке формы
+    form.addEventListener('submit', (e) => {
+        let valid = true;
+
+        if (!validateName(nameInput.value)) {
+            setError(nameInput);
+            valid = false;
+        } else {
+            setOk(nameInput);
+        }
+
+        if (!validateEmail(emailInput.value)) {
+            setError(emailInput);
+            valid = false;
+        } else {
+            setOk(emailInput);
+        }
+
+        if (!valid) {
+            e.preventDefault();
+            // Можно дополнительно сфокусировать первое неверное поле:
+            const firstError = form.querySelector('.input-error');
+            if (firstError) firstError.focus();
+        }
+    });
+
+</script>
 
 </body>
 </html>
