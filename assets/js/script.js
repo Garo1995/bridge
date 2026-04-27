@@ -1,6 +1,7 @@
 $(document).ready(function () {
     setTimeout(function () {
         $(".loading-main").addClass("loading-rem");
+        $(".opacity-zero").addClass("opacity");
     }, 1000);
 
 
