@@ -208,9 +208,6 @@ header{
     cursor: pointer;
     overflow: hidden;
 }
-.banner-box:hover{
-    opacity: 0.80;
-}
 
 .banner-box img{
     width: 100%;
@@ -321,10 +318,6 @@ h2{
     text-transform: uppercase;
     transition: 0.3s;
 }
-.arrow-href:hover{
-    opacity: 0.8;
-}
-
 .icon-arrow-prev{
     content: url("../img/arrow-left.svg");
     transition: 0.3s;
@@ -563,21 +556,20 @@ h2{
 }
 
 .anime-100{
-    transition: 0.9s;
+    transition: 0.7s;
 }
 .anime-200{
-    transition: 1.3s;
+    transition: 1.6s;
 
 }
 .anime-300{
-    transition: 1.7s;
+    transition: 2.0s;
 }
 .anime-400{
-    transition: 1.95s;
-
+    transition: 2.4s;
 }
 .anime-500{
-    transition: 2.3s;
+    transition: 2.8s;
 }
 .about-anime .about-bar{
     opacity: 1;
