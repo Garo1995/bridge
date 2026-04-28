@@ -516,7 +516,7 @@ h2{
     width: 100%;
     background-position: center;
     margin: 0 auto;
-    max-width: 2300px;
+    max-width: 2400px;
 }
 
 .about-text{
@@ -559,14 +559,14 @@ h2{
     transition: 0.7s;
 }
 .anime-200{
-    transition: 1.6s;
+    transition: 1.7s;
 
 }
 .anime-300{
-    transition: 2.0s;
+    transition: 2.1s;
 }
 .anime-400{
-    transition: 2.4s;
+    transition: 2.5s;
 }
 .anime-500{
     transition: 2.8s;
@@ -627,7 +627,7 @@ h2{
     padding: 56px 0 50px;
     position: relative;
     overflow: hidden;
-    max-width: 2300px;
+    max-width: 2400px;
     width: 100%;
     margin: 0 auto;
 }
@@ -738,7 +738,7 @@ h2{
     background-repeat: no-repeat;
     width: 100%;
     padding: 167px 0 70px;
-    max-width: 2300px;
+    max-width: 2400px;
     margin: 0 auto;
 }
 .about-project-main:before{
