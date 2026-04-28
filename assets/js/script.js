@@ -3,11 +3,11 @@ $(document).ready(function () {
         $(".loading-main").addClass("loading-rem");
         $(".opacity-zero").addClass("opacity");
         $(".body").addClass("body-fix");
-    }, 1000);
+    }, 2000);
 
     setTimeout(function () {
-        $(".about-us-main").addClass("about-anime");
-    }, 600);
+        $(".about-text").addClass("about-anime");
+    }, 500);
 
 
 });
