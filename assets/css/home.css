@@ -373,11 +373,21 @@ h2{
     display: flex;
     max-width: 504px;
     width: 100%;
+    overflow: hidden; /* обязательно */
+    position: relative;
+    border-radius: 20px;
+
 }
 .represents-photo img{
     border-radius: 20px;
+    will-change: transform;
+    transition: transform 0.1s linear;
+    /* чуть больше высоты, чтобы при сдвиге не было белых полей */
+    height: calc(100% + 80px);
+    object-fit: cover;
     width: 100%;
 }
+
 
 .represents-cnt{
     background: rgba(34, 34, 34, 1);
@@ -795,7 +805,7 @@ h2{
 .concat-page  .icon-arrow-prev {
     filter: invert(1);
 }
-.concat-flex{
+.concat-flex {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -839,7 +849,15 @@ h2{
     border-radius: 20px;
     background-position: center;
     background-image: url('../img/contact-fon.png');
+    transition: 0.8s;
+    transform: translateX(50px);
+    opacity: 0;
 }
+.concat-page-anime .concat-form{
+    transform: translateX(0);
+    opacity: 1;
+}
+
 
 .concat-form-col{
     display: flex;
@@ -1207,7 +1225,10 @@ h2{
     .about-project-text {
         margin-top: 0;
     }
-
+    .concat-form{
+        transform: translateX(0);
+        opacity: 1;
+    }
 
     .represents-item {
         max-width: 202px;

@@ -7,6 +7,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
         $(".about-text").addClass("about-anime");
+        $(".concat-page").addClass("concat-page-anime");
     }, 500);
 
 
@@ -72,3 +73,31 @@ window.addEventListener('load', revealOnScroll);
 
 
 
+
+
+
+(function () {
+    const photo = document.getElementById('parallax-photo');
+    const img   = document.getElementById('parallax-img');
+
+    if (!photo || !img) return;
+
+    // Сила параллакса: 0.15 = лёгкое движение, 0.3 = заметное
+    const SPEED = 0.15;
+
+    function onScroll() {
+        const rect       = photo.getBoundingClientRect();
+        const windowH    = window.innerHeight;
+
+        // Считаем позицию блока относительно центра экрана
+        const centerOffset = rect.top + rect.height / 2 - windowH / 2;
+
+        // Сдвигаем картинку
+        const shift = centerOffset * SPEED;
+
+        img.style.transform = `translateY(${shift}px)`;
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // вызов сразу при загрузке
+})();
