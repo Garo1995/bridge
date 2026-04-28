@@ -8,6 +8,7 @@ $(document).ready(function () {
     setTimeout(function () {
         $(".about-text").addClass("about-anime");
         $(".concat-page").addClass("concat-page-anime");
+        $(".project-main").addClass("project-main-anime");
     }, 500);
 
 

@@ -279,6 +279,15 @@ h2{
     margin: 0 auto;
     max-width: 2300px;
     width: 100%;
+    opacity: 0;
+    transition: 0.7s;
+    transform: translateY(20px);
+}
+.project-main-anime {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.9s;
+
 }
 .project-main:before{
     content: "";
