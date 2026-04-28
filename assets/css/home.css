@@ -553,30 +553,24 @@ h2{
 }
 
 .anime-100{
-    transition: 0.5s;
-    transform: translateY(15px);
+    transition: 0.9s;
 }
 .anime-200{
-    transition: 0.8s;
-    transform: translateY(25px);
+    transition: 1.3s;
 
 }
 .anime-300{
-    transition: 1.3s;
-    transform: translateY(35px);
+    transition: 1.7s;
 }
 .anime-400{
-    transition: 1.5s;
-    transform: translateY(43px);
+    transition: 1.95s;
 
 }
 .anime-500{
-    transition: 1.6s;
-    transform: translateY(48px);
+    transition: 2.3s;
 }
 .about-anime .about-bar{
     opacity: 1;
-    transform: translateY(0);
 }
 
 
