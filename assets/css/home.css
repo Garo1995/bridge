@@ -349,15 +349,15 @@ h2{
 
 
 .represents-main{
-    margin-top: 51px;
+    margin-top: 24px;
     padding-bottom: 56px;
 }
 
 
 .represents-text{
-    max-width: 1273px;
+    max-width: 1203px;
     width: 100%;
-    margin: 0 auto;
+    margin: 50px auto 150px;
 }
 .represents-text p{
     font-weight: 300;
@@ -367,7 +367,6 @@ h2{
 }
 
 .represents-flex{
-    margin-top: 165px;
     gap: 26px;
     display: flex;
 }
@@ -824,21 +823,31 @@ h2{
     font-size: 46.67px;
     line-height: 135%;
     text-transform: uppercase;
-
+    margin-bottom: 48px;
 }
 .concat-info h5{
-    margin-top: 54px;
+    margin-top: 10px;
     font-weight: 300;
     font-size: 32px;
     line-height: 130%;
     color: rgba(45, 46, 46, 1);
+    font-family: 'Oswald';
 }
-.concat-info p{
-    color: rgba(45, 46, 46, 1);
-    margin-top: 20px;
+
+.concat-info a{
+    margin-top: 48px;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 120%;
+    font-family: 'Oswald';
+    color: rgba(163, 116, 22, 1);
+    border-bottom: 1px solid rgba(163, 116, 22, 1);
+    transition: 0.3s;
+}
+.concat-info a:hover{
+    color: rgba(45, 46, 46, 1);
+    border-bottom: 1px solid rgba(45, 46, 46, 1);
+
 }
 .concat-form{
     max-width: 822px;
@@ -1237,9 +1246,6 @@ h2{
         min-height: 260px;
     }
 
-    .loading-info .about-text{
-        display: none;
-    }
     .loading-info {
         height: 100%;
     }
@@ -1284,6 +1290,18 @@ h2{
         font-size: 24px;
         line-height: 36px;
         margin-top: 50px;
+    }
+    .loading-info .about-text {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .loading-info .about-bar strong {
+        font-size: 94px;
+    }
+    .loading-info .about-bar span {
+        font-size: 16px;
+        line-height: 97%;
     }
 }
 @media (max-width: 570px){
@@ -1452,5 +1470,14 @@ h2{
 
         max-width: 278px;
         width: 100%;
+    }
+    .loading-info .about-bar strong {
+        font-size: 80px;
+    }
+
+
+    .loading-info .about-bar span {
+        font-size: 13px;
+        margin-top: 0px;
     }
 }
