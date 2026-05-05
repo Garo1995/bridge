@@ -632,25 +632,19 @@ h2{
 .philosophy-main{
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 56px 0 50px;
+    padding: 103px 0;
     position: relative;
-    overflow: hidden;
     max-width: 2400px;
     width: 100%;
     margin: 0 auto;
 }
-.philosophy-main:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(45, 45, 45, 0.5);
+.philosophy-main .container {
+    max-width: 1480px;
 }
+
 .philosophy-flex{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     justify-content: space-between;
     position: relative;
@@ -659,61 +653,47 @@ h2{
 .philosophy-title{
     max-width: 385px;
     width: 100%;
+    position: sticky;
+    top: 40px;
 }
 .philosophy-title h2{
-    font-size: 88.96px;
+    font-size: 60px;
     line-height: 100%;
     color: rgba(255, 255, 255, 1);
+    font-weight: 300;
 }
 .philosophy-title p{
     margin-top: 20px;
     font-weight: 300;
     font-size: 28px;
     line-height: 120%;
-    color: rgba(255, 255, 255, 1);
+    color: #FFFFFFB2;
 }
 
 .philosophy-wrap{
-    max-width: 826px;
+    max-width: 550px;
     width: 100%;
-    gap: 42px 21px;
+    gap: 24px ;
     display: flex;
-    flex-wrap: wrap;
     position: relative;
+    flex-direction: column;
 }
-.philosophy-wrap:after{
-    content: "";
-    position: absolute;
-    right: -10px;
-    width: 1px;
-    height: 434px;
-    top: 48px;
-    background: linear-gradient(270deg, #A37416 0%, rgba(255, 255, 255, 0.2) 131.44%);
 
-
-}
 .philosophy-boxes{
+    max-width: 420px;
+    width: 100%;
     background: rgba(25, 24, 25, 0.5);
     border: 1.23px solid  rgba(255, 255, 255, 0);
-    backdrop-filter: blur(2.2px);
-    box-shadow: 0px 4.94px 4.94px 0px rgba(0, 0, 0, 0.25);
-    max-width: 260px;
-    width: 100%;
     border-radius: 30px;
-    padding: 37px 16px 30px 22px ;
-    min-height: 398px;
+    padding: 37px 16px 25px 21px ;
     position: relative;
+    background: #19181980;
+    backdrop-filter: blur(4.937692642211914px);
+    box-shadow: 0px 4.94px 4.94px 0px #00000040;
+    min-height: 280px;
+
 }
-.philosophy-boxes:before{
-    content: '';
-    position: absolute;
-    left: 44px;
-    top: 45px;
-    background: linear-gradient(270deg, #A37416 0%, rgba(255, 255, 255, 0.2) 131.44%);
-    max-width: 262px;
-    width: 100%;
-    height: 2px;
-}
+
 .circle-bord{
     border: 4.38px solid rgba(163, 116, 22, 1);
     width: 21.875px;
@@ -724,18 +704,138 @@ h2{
 
 .philosophy-boxes h4{
     margin-top: 5px;
-    color: rgba(255, 255, 255, 1);
-    font-weight: 600;
+    color: #C49C4D;
+    font-weight: 300;
     font-size: 30.86px;
     line-height: 120%;
+
 }
 .philosophy-boxes p{
-    margin-top: 22px;
+    margin-top: 8px;
     font-weight: 300;
     font-size: 28px;
     line-height: 120%;
     color: rgba(227, 230, 236, 1);
 }
+
+
+
+
+
+
+
+
+
+.expert-team{
+    position: relative;
+    padding: 168px 0 174px;
+}
+.expert-team .container {
+    max-width: 1480px;
+}
+.expert-team:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 1138px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/expert-line.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.expert-team-flex{
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+    gap: 40px;
+}
+.expert-team-title{
+    max-width: 652px;
+    width: 100%;
+    position: sticky;
+    top: 40px;
+}
+.expert-team-title h2{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    color: #A37416;
+}
+.expert-team-title p{
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 45px;
+    color: #6A6E77;
+    margin-top: 25px;
+
+    max-width: 612px;
+    width: 100%;
+}
+.expert-team-col{
+    max-width: 573px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+}
+.expert-team-box{
+    border: 1.24px solid #EDEFF3;
+    background: #FFFFFF;
+    width: 100%;
+    opacity: 1;
+    gap: 9.95px;
+    border-radius: 24.87px;
+    padding: 9.95px;
+    display: flex;
+}
+
+.expert-team-info {
+    max-width: 242px;
+    width: 100%;
+    padding: 24px 19px 0 24px;
+}
+
+.expert-team-info h3{
+    font-family: Oswald;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 111%;
+    color: #A37416;
+}
+.expert-team-info span{
+    color: #A36F16;
+    font-weight: 300;
+    font-size: 17.41px;
+    line-height: 150%;
+    margin-top: 5px;
+}
+.expert-team-info p{
+    margin-top: 19px;
+    font-weight: 300;
+    font-size: 17.41px;
+    line-height: 150%;
+    color: #666666;
+}
+.expert-team-photo{
+    max-width: 298px;
+    width: 100%;
+    display: flex;
+}
+.expert-team-photo img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+
 
 
 
@@ -1030,7 +1130,20 @@ h2{
 
 
 }
-
+@media (max-width: 1399px){
+    .expert-team-title h2 {
+        font-size: 50px;
+    }
+    .expert-team-title {
+        max-width: 582px;
+    }
+    .philosophy-main {
+        background-position: center;
+    }
+    .philosophy-wrap {
+        max-width: 450px;
+    }
+}
 
 @media (max-width: 1299px){
     .banner-info {
@@ -1058,17 +1171,11 @@ h2{
     .philosophy-boxes h4 {
         font-size: 26.86px;
     }
-    .philosophy-wrap {
-        max-width: 568px;
-        gap: 26px 21px;
-    }
+
     .philosophy-main {
-        padding: 56px 0 36px;
         background-position: center;
     }
-    .philosophy-wrap:after{
-        display: none;
-    }
+
     .about-project-main {
         padding: 100px 0 50px;
     }
@@ -1123,8 +1230,13 @@ h2{
     .banner-location {
         gap: 11px;
     }
-
-
+    .expert-team-title p {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    .expert-team-title {
+        max-width: 430px;
+    }
     .container {
         padding: 0 27px;
     }
@@ -1132,12 +1244,16 @@ h2{
     .about-project {
         padding: 108px 80px 77px 80px;
     }
-
+    .expert-team-title h2 {
+        line-height: 124%;
+    }
     .represents-main {
         margin-top: 20px;
         padding-bottom: 32px;
     }
-
+    .expert-team-flex {
+        gap: 26px;
+    }
     .represents-text {
         margin: 28px auto 85px;
     }
@@ -1255,6 +1371,43 @@ h2{
     .loading-info {
         height: 100%;
     }
+    .philosophy-title {
+        position: relative;
+        top: 0;
+    }
+    .philosophy-boxes {
+        max-width: 520px;
+        min-height: 261px;
+    }
+    .expert-team-flex {
+        gap: 40px;
+        flex-direction: column;
+    }
+    .expert-team-title {
+        max-width: 680px;
+        position: relative;
+        top: 0;
+    }
+    .expert-team-col {
+        max-width: 673px;
+    }
+    .philosophy-main {
+        padding: 55px 0;
+    }
+    .expert-team-title p {
+        font-size: 25px;
+        line-height: 32px;
+        margin-top: 18px;
+    }
+    .expert-team-title h2 {
+        font-size: 60px;
+    }
+    .expert-team {
+        padding: 123px 0;
+    }
+    .expert-team:before{
+        display: none;
+    }
 }
 @media (max-width: 760px){
     .banner-info {
@@ -1270,6 +1423,7 @@ h2{
         justify-content: space-between;
 
     }
+
     .project-main:before {
         background: rgba(0, 0, 0, 0.2);
     }
@@ -1285,10 +1439,7 @@ h2{
         flex-direction: column;
         gap: 20px;
     }
-    .philosophy-wrap {
-        align-items: center;
-        justify-content: center;
-    }
+
     .concat-flex {
         padding-bottom: 190px;
     }
@@ -1368,8 +1519,7 @@ h2{
         background-position: unset;
     }
     .philosophy-main {
-        background-position: 63%;
-        padding: 156px 0 29px;
+        background-position: 73%;
     }
     .philosophy-title h2 {
         font-size: 64px;
@@ -1459,11 +1609,25 @@ h2{
     .loading-info img {
         max-width: 241px;
     }
-
+    .philosophy-flex {
+        padding: 0 30px;
+    }
+    .expert-team-box {
+        display: flex;
+        flex-direction: column;
+    }
     .loading-main {
         background: #fff;
     }
-
+    .expert-team-info h3{
+        max-width: 207px;
+        width: 100%;
+    }
+    .expert-team-info {
+        max-width: 100%;
+        padding: 24px 24px 40px 24px;
+        min-height: 420px;
+    }
     .concert-program p {
         font-size: 20px;
         line-height: 33px;

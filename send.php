@@ -1,7 +1,7 @@
 <?php
 // send.php
 // Настройки
-$to = "info@mostfundation.ru";
+$to = "M.O.C.T@yandex.ru";
 $mail_from = "no-reply@yourdomain.com"; // ОБЯЗАТЕЛЬНО доменная почта вашего сайта
 
 // Получаем POST безопасно
